@@ -8,6 +8,8 @@ class Fert extends StatefulWidget {
 }
 
 class _FertState extends State<Fert> {
+  var autoFert = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +25,6 @@ class _FertState extends State<Fert> {
         backgroundColor: Colors.black,
         title: Center(
           child: Container(
-            
             height: 55,
             decoration: BoxDecoration(
               color: const Color.fromRGBO(44, 44, 44, 100),
@@ -37,7 +38,7 @@ class _FertState extends State<Fert> {
             ),
           ),
         ),
-        
+
         // toolbarHeight: 50,
       ),
       body: SingleChildScrollView(
@@ -50,9 +51,9 @@ class _FertState extends State<Fert> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
                   Container(
-                    margin: const EdgeInsets.only(bottom: 10, top: 20, right: 10),
+                    margin:
+                        const EdgeInsets.only(bottom: 10, top: 20, right: 10),
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: const Color.fromRGBO(44, 44, 44, 100),
@@ -84,7 +85,8 @@ class _FertState extends State<Fert> {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.only(bottom: 10, top: 20, right: 10),
+                    margin:
+                        const EdgeInsets.only(bottom: 10, top: 20, right: 10),
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: const Color.fromRGBO(44, 44, 44, 100),
@@ -116,7 +118,8 @@ class _FertState extends State<Fert> {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.only(bottom: 10, top: 20),
+                    margin:
+                        const EdgeInsets.only(bottom: 10, top: 20, right: 10),
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: const Color.fromRGBO(44, 44, 44, 100),
@@ -137,7 +140,7 @@ class _FertState extends State<Fert> {
                           ),
                         ),
                         Text(
-                          '4 liter',
+                          '8 Liters',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -149,7 +152,69 @@ class _FertState extends State<Fert> {
                   ),
                 ],
               ),
-              
+              Container(
+                margin: const EdgeInsets.only(bottom: 10, top: 0),
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: const Color.fromRGBO(44, 44, 44, 100),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                width: 370,
+                height: 50,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Current Power ',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'On',
+                      style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 10, top: 0),
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: const Color.fromRGBO(44, 44, 44, 100),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                width: 370,
+                height: 50,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Automatic ',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Switch(
+                      value: autoFert,
+                      onChanged: (bool value) {
+                        // Memperbarui state berdasarkan nilai yang baru
+                        setState(() {
+                          autoFert = value;
+                        });
+                      },
+                    ),
+                  ],
+                ),
+              ),
               const SizedBox(height: 10),
               const Text(
                 'Progress',
@@ -181,23 +246,114 @@ class _FertState extends State<Fert> {
                 ),
               ),
               const SizedBox(height: 20),
-              Container(
-                width: 370,
-                height: 200,
-                decoration: BoxDecoration(
-                  color: const Color.fromRGBO(44, 44, 44, 100),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Center(
-                  child: Text(
-                    'Map Location',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+              Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.all(10),
+                    // width: 370,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      color: const Color.fromRGBO(44, 44, 44, 100),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Center(
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Nitrogen',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              SizedBox(height: 12),
+                              Text(
+                                'Phosphor',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              SizedBox(height: 12),
+                              Text(
+                                'Pottasium ',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: 30),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '40%',
+                                style: TextStyle(
+                                  color: Colors.green,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              SizedBox(height: 12),
+                              Text(
+                                '20%',
+                                style: TextStyle(
+                                  color: Colors.green,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              SizedBox(height: 12),
+                              Text(
+                                '15%',
+                                style: TextStyle(
+                                  color: Colors.green,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.all(10),
+                    // width: 370,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      color: const Color.fromRGBO(44, 44, 44, 100),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Center(
+                      child: Column(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text('Recent Activity',
+                          style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),)
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: 100)
             ],
@@ -207,6 +363,3 @@ class _FertState extends State<Fert> {
     );
   }
 }
-
-
-

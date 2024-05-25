@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.black,
         title: Center(
           child: Container(
-            width: 230,
+            // width: 230,
             height: 55,
             decoration: BoxDecoration(
               color: const Color.fromRGBO(44, 44, 44, 100),
