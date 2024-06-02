@@ -8,6 +8,9 @@ class DronePage extends StatefulWidget {
 }
 
 class _DronePageState extends State<DronePage> {
+
+  var dronePower = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +58,7 @@ class _DronePageState extends State<DronePage> {
                     color: const Color.fromRGBO(44, 44, 44, 100),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  width: 370,
+                  width: 360,
                   height: 80,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -99,7 +102,7 @@ class _DronePageState extends State<DronePage> {
                     color: const Color.fromRGBO(44, 44, 44, 100),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  width: 370,
+                  width: 360,
                   height: 80,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -143,7 +146,7 @@ class _DronePageState extends State<DronePage> {
                     color: const Color.fromRGBO(44, 44, 44, 100),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  width: 370,
+                  width: 360,
                   height: 80,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -187,7 +190,7 @@ class _DronePageState extends State<DronePage> {
                     color: const Color.fromRGBO(44, 44, 44, 100),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  width: 370,
+                  width: 360,
                   height: 50,
                   child: const Row(
                     
@@ -211,6 +214,38 @@ class _DronePageState extends State<DronePage> {
                       
                     ],
                   ),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 10, top: 0),
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: const Color.fromRGBO(44, 44, 44, 100),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                width: 360,
+                height: 50,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Drone power ',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Switch(
+                      value: dronePower,
+                      onChanged: (bool value) {
+                        // Memperbarui state berdasarkan nilai yang baru
+                        setState(() {
+                          dronePower = value;
+                        });
+                      },
+                    ),
+                  ],
                 ),
               ),
               // const SizedBox(height: 20),
@@ -334,7 +369,7 @@ class _DronePageState extends State<DronePage> {
               ),
               const SizedBox(height: 10),
               Container(
-                width: 370,
+                width: 360,
                 height: 20,
                 decoration: BoxDecoration(
                   color: const Color.fromRGBO(44, 44, 44, 100),
@@ -355,7 +390,7 @@ class _DronePageState extends State<DronePage> {
               ),
               const SizedBox(height: 20),
               Container(
-                width: 370,
+                width: 360,
                 height: 200,
                 decoration: BoxDecoration(
                   color: const Color.fromRGBO(44, 44, 44, 100),

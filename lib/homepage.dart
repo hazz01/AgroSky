@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                     color: const Color.fromRGBO(44, 44, 44, 100),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  width: 370, // Set the width of the container
+                  width: 360, // Set the width of the container
                   height: 80, // Set the height of the container
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                           color: const Color.fromRGBO(44, 44, 44, 100),
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        width: 186, // Set the width of the container
+                        width: 176, // Set the width of the container
                         height: 73, // Set the height of the container
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -160,7 +160,7 @@ class _HomePageState extends State<HomePage> {
                           color: const Color.fromRGBO(44, 44, 44, 100),
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        width: 186, // Set the width of the container
+                        width: 176, // Set the width of the container
                         height: 73, // Set the height of the container
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -200,7 +200,7 @@ class _HomePageState extends State<HomePage> {
                     color: const Color.fromRGBO(44, 44, 44, 100),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  width: 370, // Set the width of the container
+                  width: 360, // Set the width of the container
                   height: 80, // Set the height of the container
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -244,7 +244,7 @@ class _HomePageState extends State<HomePage> {
                     color: const Color.fromRGBO(44, 44, 44, 100),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  width: 370, // Set the width of the container
+                  width: 360, // Set the width of the container
                   // height: 280, // Set the height of the container
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -345,7 +345,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           SizedBox(height: 12),
                           Container(
-                            width: 335,
+                            width: 325,
                             child: Text(
                                 'The AI Camera detects a high level of animal pests. We recommend taking immediate action by cleaning it with...',
                                 softWrap: true,

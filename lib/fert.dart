@@ -59,7 +59,7 @@ class _FertState extends State<Fert> {
                       color: const Color.fromRGBO(44, 44, 44, 100),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    width: 120,
+                    width: 110,
                     height: 110,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -92,7 +92,7 @@ class _FertState extends State<Fert> {
                       color: const Color.fromRGBO(44, 44, 44, 100),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    width: 120,
+                    width: 110,
                     height: 110,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -110,7 +110,7 @@ class _FertState extends State<Fert> {
                           '12 Liters',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 25,
+                            fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -119,13 +119,13 @@ class _FertState extends State<Fert> {
                   ),
                   Container(
                     margin:
-                        const EdgeInsets.only(bottom: 10, top: 20, right: 10),
+                        const EdgeInsets.only(bottom: 10, top: 20, right: 0),
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: const Color.fromRGBO(44, 44, 44, 100),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    width: 120,
+                    width: 110,
                     height: 110,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -159,7 +159,7 @@ class _FertState extends State<Fert> {
                   color: const Color.fromRGBO(44, 44, 44, 100),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                width: 370,
+                width: 360,
                 height: 50,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -190,7 +190,7 @@ class _FertState extends State<Fert> {
                   color: const Color.fromRGBO(44, 44, 44, 100),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                width: 370,
+                width: 360,
                 height: 50,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -226,7 +226,7 @@ class _FertState extends State<Fert> {
               ),
               const SizedBox(height: 10),
               Container(
-                width: 370,
+                width: 360,
                 height: 20,
                 decoration: BoxDecoration(
                   color: const Color.fromRGBO(44, 44, 44, 100),
@@ -247,11 +247,12 @@ class _FertState extends State<Fert> {
               ),
               const SizedBox(height: 20),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.all(10),
-                    // width: 370,
+                    width: 180,
                     height: 200,
                     decoration: BoxDecoration(
                       color: const Color.fromRGBO(44, 44, 44, 100),
@@ -332,7 +333,7 @@ class _FertState extends State<Fert> {
                   Container(
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.all(10),
-                    // width: 370,
+                    width: 170,
                     height: 200,
                     decoration: BoxDecoration(
                       color: const Color.fromRGBO(44, 44, 44, 100),
