@@ -1,16 +1,42 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class DronePage extends StatefulWidget {
-  const DronePage({super.key});
+  const DronePage({Key? key});
 
   @override
   State<DronePage> createState() => _DronePageState();
 }
 
 class _DronePageState extends State<DronePage> {
+  int dronePower = 0; // Changed to int and initialized with 0
+  final DatabaseReference _databaseRef = FirebaseDatabase.instance.ref();
 
-  var dronePower = true;
+  @override
+  void initState() {
+    super.initState();
+    _initializeFirebase();
+    _fetchDronePower();
+  }
 
+  Future<void> _initializeFirebase() async {
+    await Firebase.initializeApp();
+  }
+
+  Future<void> _fetchDronePower() async {
+    final snapshot = await _databaseRef.child('pompa3').get();
+    if (snapshot.exists) {
+      setState(() {
+        dronePower = snapshot.value as int; // Changed to int
+      });
+    }
+  }
+
+  Future<void> _updateDronePower(int value) async {
+    await _databaseRef.child('pompa3').set(value);
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -237,14 +263,15 @@ class _DronePageState extends State<DronePage> {
                       ),
                     ),
                     Switch(
-                      value: dronePower,
+                      value: dronePower == 1, // Check if dronePower is 1 for ON
                       onChanged: (bool value) {
                         // Memperbarui state berdasarkan nilai yang baru
                         setState(() {
-                          dronePower = value;
+                          dronePower = value ? 1 : 0; // Convert bool to int
+                          _updateDronePower(dronePower);
                         });
                       },
-                    ),
+                    )
                   ],
                 ),
               ),

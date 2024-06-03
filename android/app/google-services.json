@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "520935523382",
+    "firebase_url": "https://agroskypea-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "agroskypea",
+    "storage_bucket": "agroskypea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520935523382:android:fa765232b0621e4450c497",
+        "android_client_info": {
+          "package_name": "id.grounded.agrosky.agrosky"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5CrzDVNt5otImohlpYtBrWTmdz2pdiKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
